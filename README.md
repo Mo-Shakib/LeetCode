@@ -1,7 +1,7 @@
 # LeetCode Solutions
 My LeetCode solution.
 
-![LeetCode Stats](https://leetcode.card.workers.dev/Mo-Shakib?theme=dark&font=baloo&extension=null&border=1)
+![LeetCode Stats](https://leetcode.card.workers.dev/Mo-Shakib?theme=default&font=baloo&extension=null&border=1)
 
 
 
