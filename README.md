@@ -27,3 +27,4 @@ My LeetCode solution.
 |26|[Remove duplicates from sorted array](https://leetcode.com/problems/remove-duplicates-from-sorted-array)|[Python](Python/26.remove-duplicates-from-sorted-array.py)|Easy|43.80%|
 |11|[Container with most water](https://leetcode.com/problems/container-with-most-water)|[Python](Python/11.container-with-most-water.py)|Medium|49.40%|
 |53|[Maximum subarray](https://leetcode.com/problems/maximum-subarray)|[Python](Python/53.maximum-subarray.py)|Easy|45.90%|
+|709|[To lower case](https://leetcode.com/problems/to-lower-case)|[Python](Python/709.to-lower-case.py)|Easy|78.70%|
