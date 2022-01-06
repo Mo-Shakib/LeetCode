@@ -1,7 +1,8 @@
 # LeetCode Solutions
 My LeetCode solution.
 
-![LeetCode Stats](https://leetcode.card.workers.dev/Mo-Shakib?theme=default&font=baloo&extension=null&border=1)
+<a href="https://leetcode.com/Mo-Shakib"><img src="https://leetcode.card.workers.dev/Mo-Shakib?theme=default&font=baloo&extension=null&border=1"></a>
+
 
 <details>
   <summary><b> Time complexity chart</b></summary>
@@ -11,8 +12,8 @@ My LeetCode solution.
 ![](https://i.imgur.com/40gXcOR.png)
 </details>
 
-| #    | Title | Solution | Difficulty | Acceptance |
-| ---- | ----- | -------- | ---------- | ---------- |
+|   #   | Title | Solution | Difficulty | Acceptance |
+| ----- | ----- | -------- | ---------- | ---------- |
 |88|[Merge sorted array](https://leetcode.com/problems/merge-sorted-array)|[Python](Python/88.merge-sorted-array.py)|Easy|38.50%|
 |14|[Longest common prefix](https://leetcode.com/problems/longest-common-prefix)|[Python](Python/14.longest-common-prefix.py)|Easy|34.80%|
 |997|[Find the town judge](https://leetcode.com/problems/find-the-town-judge)|[Python](Python/997.find-the-town-judge.py)|Easy|50.00%|
