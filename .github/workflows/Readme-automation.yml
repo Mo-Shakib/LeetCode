@@ -1,0 +1,20 @@
+name: Readme automation
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: update
+      uses: actions/setup-python@v2
+    - name: Install dependencies
+      run: |
+        git config --global user.email "mo.shakib.official@gmail.com"
+        git config --global user.name "Mo-Shakib"
+        python -m pip install --upgrade pip
+        pip install GitPython
+    - name: Write README.md
+      run: |
+        python3 README_automation.py
