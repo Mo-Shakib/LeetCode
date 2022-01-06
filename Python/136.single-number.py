@@ -7,15 +7,18 @@
 # @lc code=start
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
-        if len(nums) == 1:
-            return nums[0]
-        for i in range(len(nums)-1):
-            if nums[i] != nums[i+1]:
-                if nums.count(nums[i]) == 1:
-                    return nums[i]
-                elif nums.count(nums[i+1]) == 1:
-                    return nums[i+1]
-        
+        dic = {}
+        for x in range(len(nums)):
+            count = nums.count(nums[x])
+            if count == 1:
+                # best case
+                return nums[x]
+            if nums[x] not in dic:
+                dic[count] = nums[x]
+        # wrost case
+        return dic[1]
+
+# Time complexity: O(n)
         
 # @lc code=end
 
