@@ -1,7 +1,8 @@
 name: Readme automation
 
-on: [push]
-
+on:
+  schedule: # 03:00 JST == 18:00 UTC
+    - cron: "1 0 */3 * *"
 jobs:
   build:
     runs-on: ubuntu-latest
