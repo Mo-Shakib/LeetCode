@@ -1,6 +1,6 @@
 # GitHub README.md automation script by Mohammad Shakib
 # This script can automatically update the readme file based on the files in the repo.
-# Last update: 06-01-2022
+# Last update: 07-01-2022
 
 import os
 import git
@@ -68,7 +68,7 @@ readme_edit.close()
 
 print("[+] Adding files to git")
 
-commit_message = "Updated"
+commit_message = "Updated by GitHub bot"
 
 repo = git.Repo("/home/runner/work/LeetCode/LeetCode/")
 
