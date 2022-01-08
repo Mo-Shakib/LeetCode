@@ -29,3 +29,4 @@ My LeetCode solution.
 |53|[Maximum subarray](https://leetcode.com/problems/maximum-subarray)|[Python](Python/53.maximum-subarray.py)|Easy|45.90%|
 |709|[To lower case](https://leetcode.com/problems/to-lower-case)|[Python](Python/709.to-lower-case.py)|Easy|78.70%|
 |136|[Single number](https://leetcode.com/problems/single-number)|[Python](Python/136.single-number.py)|Easy|64.70%|
+|5960|[Capitalize the title](https://leetcode.com/problems/capitalize-the-title)|[Python](Python/5960.capitalize-the-title.py)|-|-|
