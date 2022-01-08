@@ -1,8 +1,9 @@
 name: Readme automation
 
 on:
-  schedule: # 03:00 JST == 18:00 UTC
-    - cron: "1 0 */3 * *"
+  workflow_dispatch:
+  schedule:
+    - cron: "1 0 * * *"
 jobs:
   build:
     runs-on: ubuntu-latest
