@@ -15,6 +15,7 @@ jobs:
         git config --global user.email "mo.shakib.official@gmail.com"
         git config --global user.name "Mo-Shakib"
         python -m pip install --upgrade pip
+        pip install Leetcode-problem-info
         pip install GitPython
     - name: Write README.md
       run: |
