@@ -9,12 +9,12 @@ from datetime import datetime
 from git.objects.commit import Commit 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - 
-
 def get_date(epoch_time):
     return datetime.fromtimestamp(epoch_time)
 
 submissionDate_fileName = {}
 
+# repo = git.Repo("/home/runner/work/LeetCode/LeetCode/")
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 repo = git.Repo(dir_path)
@@ -34,7 +34,7 @@ submissionTime = {}
 skip_files = ['test.py', 'main.py']
 driver = problem_info.Get_Info()
 problem_details = driver.all_data()
-readme_edit = open("README.mdx", "w")
+readme_edit = open("README.md", "w")
 
 for files in os.listdir("Python"):
     if files.endswith(".py"):
@@ -48,7 +48,6 @@ newfiles = all_files_id
 newfiles_data = {}
 for i in newfiles:
     newfiles_data[i] = file_data[i]
-
 
 print('[*] Updating README.md...')
 
@@ -89,8 +88,8 @@ readme_edit.close()
 print("[+] Adding changes to GitHub")
 
 commit_message = "Updated by automated commit"
-# repo = git.Repo("/home/runner/work/LeetCode/LeetCode/")
-repo.git.add('--all')
+
+repo.git.add('README.md')
 repo.git.commit('-m', commit_message, author='Shakib')
 origin = repo.remote(name='origin')
 origin.push()
