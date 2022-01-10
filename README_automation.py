@@ -56,7 +56,7 @@ for x in newfiles:
         problem_info = problem_details[int(problem_id)]
     except KeyError:
         problem_info = ['-','-','-'] 
-    readme_edit.write(f"|{problem_id}|[{problem_name.capitalize()}]({url})|[Python](Python/{file_data[x]})|{problem_info[2]}|{problem_info[1]}|\n")
+    readme_edit.write(f"|{problem_id}|[{problem_name.capitalize()}]({url})|[Python](Python/{file_data[x]})|{problem_info[2]}|\n")
 
 readme_edit.close()
 
