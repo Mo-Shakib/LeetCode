@@ -3,7 +3,7 @@
 # Last update: 10-01-2022
 # Version - v2.0.0
 
-import os, time, pytz
+import os, time, pytz, git
 from LeetCode_problem_info import problem_info
 from datetime import datetime
 
