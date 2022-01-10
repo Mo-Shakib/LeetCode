@@ -14,14 +14,14 @@ def get_date(epoch_time):
 
 submissionDate_fileName = {}
 
+# dir_path = os.path.dirname(os.path.realpath(__file__))
+# repo = git.Repo(dir_path)
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
-
-repo = git.Repo(dir_path)
+repo = git.Repo("/home/runner/work/LeetCode/LeetCode/")
 tree = repo.tree()
 
 for blob in tree.trees[1]:
-    commit = next(repo.iter_commits(paths=blob.name, max_count=1))
+    commit = next(repo.iter_commits(paths=blob.path, max_count=1))
     date = str(get_date(commit.committed_date))[:10]
     submissionDate_fileName[blob.name] = date
 
