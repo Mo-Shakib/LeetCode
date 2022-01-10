@@ -30,3 +30,7 @@ My LeetCode solution.
 |709|[To lower case](https://leetcode.com/problems/to-lower-case)|[Python](Python/709.to-lower-case.py)|Easy|78.70%|
 |136|[Single number](https://leetcode.com/problems/single-number)|[Python](Python/136.single-number.py)|Easy|64.70%|
 |5960|[Capitalize the title](https://leetcode.com/problems/capitalize-the-title)|[Python](Python/5960.capitalize-the-title.py)|-|-|
+|5976|[Check if every row and column contains all numbers](https://leetcode.com/problems/check-if-every-row-and-column-contains-all-numbers)|[Python](Python/5976.check-if-every-row-and-column-contains-all-numbers.py)|-|-|
+|66|[Plus one](https://leetcode.com/problems/plus-one)|[Python](Python/66.plus-one.py)|Easy|42.00%|
+|258|[Add digits](https://leetcode.com/problems/add-digits)|[Python](Python/258.add-digits.py)|Easy|55.80%|
+|349|[Intersection of two arrays](https://leetcode.com/problems/intersection-of-two-arrays)|[Python](Python/349.intersection-of-two-arrays.py)|Easy|60.20%|
