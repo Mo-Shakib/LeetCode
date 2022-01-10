@@ -43,6 +43,7 @@ for files in os.listdir("Python"):
             file_id = files.split(".")[0]
             all_files_id.append(file_id)
             file_data[file_id] = files + "." + submissionDate_fileName[files]
+            print(submissionDate_fileName[files])
 
 newfiles = all_files_id
 newfiles_data = {}
