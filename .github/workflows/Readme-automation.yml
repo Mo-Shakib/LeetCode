@@ -11,10 +11,12 @@ jobs:
     - uses: actions/checkout@v2
     - name: update
       uses: actions/setup-python@v2
+    - name: Git Config
+      run: |
+        git config --global user.email ${{ secrets.ACTION_MAIL }}
+        git config --global user.name ${{ secrets.ACTION_NAME }}
     - name: Install dependencies
       run: |
-        git config --global user.email "mo.shakib.official@gmail.com"
-        git config --global user.name "Mo-Shakib"
         python -m pip install --upgrade pip
         pip install Leetcode-problem-info
         pip install GitPython
