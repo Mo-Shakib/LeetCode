@@ -8,29 +8,26 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    
     - uses: actions/checkout@v2
       with:
-        token: ${{ secrets.ACCOUNT_TOKEN }}
+        fetch-depth: 0
     
     - name: update
       uses: actions/setup-python@v2
+    
     - name: Git Config
       run: |
         git config --global user.email ${{ secrets.ACTION_MAIL }}
         git config --global user.name ${{ secrets.ACTION_NAME }}
-    - name: Clone Repo
-      run: |
-        ls
-        git clone https://github.com/Mo-Shakib/LeetCode.git
-        cd LeetCode
-        ls
+    
     - name: Install Libraries 
       run: |
         python -m pip install --upgrade pip
         pip install Leetcode-problem-info
         pip install pytz
         pip install GitPython
+    
     - name: Write README.md
       run: |
-        cd LeetCode
         python3 README_automation.py
