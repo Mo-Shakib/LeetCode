@@ -21,7 +21,7 @@ repo = git.Repo(dir_path)
 tree = repo.tree()
 
 for blob in tree.trees[1]:
-    commit = next(repo.iter_commits(paths=blob.path, max_count=1))
+    commit = next(repo.iter_commits(paths=blob, max_count=1))
     date = str(get_date(commit.committed_date))[:10]
     submissionDate_fileName[blob.name] = date
 
