@@ -14,10 +14,10 @@ def get_date(epoch_time):
 
 submissionDate_fileName = {}
 
-# dir_path = os.path.dirname(os.path.realpath(__file__))
-# repo = git.Repo(dir_path)
+dir_path = os.path.dirname(os.path.realpath(__file__))
+repo = git.Repo(dir_path)
 
-repo = git.Repo("/home/runner/work/LeetCode/LeetCode/")
+# repo = git.Repo("/home/runner/work/LeetCode/LeetCode/")
 tree = repo.tree()
 
 for blob in tree.trees[1]:
@@ -89,7 +89,7 @@ time.sleep(10)
 print("[+] Adding changes to GitHub")
 
 commit_message = "Updated by automated commit"
-repo.git.add('--all')
+repo.git.add('README.md')
 repo.git.commit('-m', commit_message, author='Shakib')
 origin = repo.remote(name='origin')
 origin.push()
