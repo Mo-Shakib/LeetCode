@@ -2,70 +2,76 @@
 # This script can automatically update the readme file based on the files in the repo.
 # Last update: 09-01-2022
 
-import os
-import git
+import os, time, pytz
 from LeetCode_problem_info import problem_info
-readme = open("README.md", "r")
+from datetime import datetime
 
 all_files = []
-valid_ids = [str(x) for x in range(1, 100000)]
 all_files_id = []
-old_files = []
 file_data = {}
+submissionTime = {}
 skip_files = ['test.py', 'main.py']
 driver = problem_info.Get_Info()
 problem_details = driver.all_data()
+readme_edit = open("READMEx.md", "w")
 
 for files in os.listdir("Python"):
     if files.endswith(".py"):
         if files not in skip_files:
             all_files.append(files)
+            lastModTime = os.path.getmtime(f'Python/{files}')
+            lastModTime = time.strftime('%Y-%m-%d', time.localtime(lastModTime))
+            submissionTime[files] = lastModTime
             file_id = files.split(".")[0]
             all_files_id.append(file_id)
-            file_data[file_id] = files
+            file_data[file_id] = files + "." + lastModTime
 
-for i in readme.readlines():
-    try:
-        x = i.split("|")
-        if x[1] in valid_ids:
-            old_files.append(x[1])
-    except IndexError:
-        pass
-
-newfiles = list(set(all_files_id) - set(old_files))
-
-if len(newfiles) == 0:
-    print("[!] No new file found")
-else:
-    n = 0
-    for i in newfiles:
-        print('[+] Adding:',file_data[i])
-        n += 1
-    print(f'[=] Total {n} files indexed.')
+newfiles = all_files_id
+newfiles_data = {}
+for i in newfiles:
+    newfiles_data[i] = file_data[i]
 
 
-leetcode_url = "https://leetcode.com/problems/"
+print('[*] Updating README.md...')
 
-readme_edit = open("README.md", "a")
-for x in newfiles:
-    problem_id = file_data[x].split(".")[0]
-    url = leetcode_url + file_data[x].split(".")[1]
-    problem_name = file_data[x].split(".")[1].strip()
+readme_edit.write('# LeetCode Solutions\n\n')
+readme_edit.write('[![wakatime](https://wakatime.com/badge/github/Mo-Shakib/LeetCode.svg)](https://wakatime.com/badge/github/Mo-Shakib/LeetCode)')
+readme_edit.write('![example workflow](https://github.com/Mo-Shakib/LeetCode/actions/workflows/Readme-automation.yml/badge.svg)\n\n')
+readme_edit.write('<a href="https://leetcode.com/Mo-Shakib"><img src="https://leetcode.card.workers.dev/Mo-Shakib?theme=dark&font=baloo&extension=null&border=0.2"></a>\n')
+readme_edit.write('\n\n[LeetCode](https://leetcode.com/) is a website containing many algorithm questions. Most of them are real interview questions of Google, Facebook, LinkedIn, Apple, etc. and it always help to sharp our algorithm skills. This repo shows my solutions in Python. Please feel free to reference and STAR to support this repo, thank you!\n\n\n')
+
+readme_edit.write('|   #   |  Title | Solution | Difficulty | Submission |\n')
+readme_edit.write('| ----- |  ----- | -------- | ---------- | ---------- |\n')
+
+newfiles_data = {k: v for k, v in sorted(newfiles_data.items(), key = lambda item: item[1][-10:])}
+
+for key, file_data in newfiles_data.items():
+    print(f'[+] Adding: {file_data[:-11]}')
+    problem_id = newfiles_data[key].split(".")[0]
+    url = "https://leetcode.com/problems/" + newfiles_data[key].split(".")[1]
+    problem_name = newfiles_data[key].split(".")[1].strip()
     problem_name = problem_name.replace("-", " ")
+    date = newfiles_data[key].split(".")[3]
+    filePath = "Python/" + newfiles_data[key][:-11]
     try:
         problem_info = problem_details[int(problem_id)]
     except KeyError:
         problem_info = ['-','-','-'] 
-    readme_edit.write(f"|{problem_id}|[{problem_name.capitalize()}]({url})|[Python](Python/{file_data[x]})|{problem_info[2]}|\n")
+    readme_edit.write(f"| **{problem_id}** | [{problem_name.capitalize()}]({url}) | [Python]({filePath}) | {problem_info[2]}| {date} |\n")
 
+current_time = datetime.now(pytz.timezone('Asia/Dhaka'))
+current_time = current_time.strftime("%d %B, %Y | %H:%M:%S")
+
+readme_edit.write('\n\n\n')
+readme_edit.write(f'__Last update:__ {current_time}')
+
+print('[=] README.md updated.')
 readme_edit.close()
 
-print("[+] Adding files to git")
+print("[+] Adding changes to GitHub")
 
-commit_message = "Updated by GitHub bot"
-
+commit_message = "Updated by automated commit"
 repo = git.Repo("/home/runner/work/LeetCode/LeetCode/")
-
 repo.git.add('--all')
 repo.git.commit('-m', commit_message, author='Shakib')
 origin = repo.remote(name='origin')
