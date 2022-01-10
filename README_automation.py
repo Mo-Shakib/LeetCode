@@ -13,11 +13,8 @@ def get_date(epoch_time):
     return datetime.fromtimestamp(epoch_time)
 
 submissionDate_fileName = {}
-
 dir_path = os.path.dirname(os.path.realpath(__file__))
 repo = git.Repo(dir_path)
-
-# repo = git.Repo("/home/runner/work/LeetCode/LeetCode/")
 tree = repo.tree()
 
 for blob in tree.trees[1]:
@@ -53,13 +50,13 @@ for i in newfiles:
 print('[*] Updating README.md...')
 
 readme_edit.write('# LeetCode Solutions\n\n')
-readme_edit.write('[![wakatime](https://wakatime.com/badge/github/Mo-Shakib/LeetCode.svg)](https://wakatime.com/badge/github/Mo-Shakib/LeetCode)')
+readme_edit.write('[![wakatime](https://wakatime.com/badge/github/Mo-Shakib/LeetCode.svg)](https://wakatime.com/badge/github/Mo-Shakib/LeetCode) ')
 readme_edit.write('![example workflow](https://github.com/Mo-Shakib/LeetCode/actions/workflows/Readme-automation.yml/badge.svg)\n\n')
 readme_edit.write('<a href="https://leetcode.com/Mo-Shakib"><img src="https://leetcode.card.workers.dev/Mo-Shakib?theme=dark&font=baloo&extension=null&border=0.2"></a>\n')
 readme_edit.write('\n\n[LeetCode](https://leetcode.com/) is a website containing many algorithm questions. Most of them are real interview questions of Google, Facebook, LinkedIn, Apple, etc. and it always help to sharp our algorithm skills. This repo shows my solutions in Python. Please feel free to reference and STAR to support this repo, thank you!\n\n\n')
 
-readme_edit.write('|   #   |  Title | Solution | Difficulty | Submission |\n')
-readme_edit.write('| ----- |  ----- | -------- | ---------- | ---------- |\n')
+readme_edit.write('|   #   |  Title | Solution | Difficulty | Submission Date |\n')
+readme_edit.write('| ----- |  ----- | -------- | ---------- | --------------- |\n')
 
 newfiles_data = {k: v for k, v in sorted(newfiles_data.items(), key = lambda item: item[1][-10:])}
 
