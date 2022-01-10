@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.ACCOUNT_TOKEN }}
+    
     - name: update
       uses: actions/setup-python@v2
     - name: Git Config
@@ -19,8 +22,6 @@ jobs:
       run: |
         ls
         git clone https://github.com/Mo-Shakib/LeetCode.git
-        ${{ secrets.ACTION_NAME }}
-        ${{ secrets.USER_TOKEN }}
         cd LeetCode
         ls
     - name: Install Libraries 
