@@ -19,6 +19,8 @@ jobs:
       run: |
         ls
         git clone https://github.com/Mo-Shakib/LeetCode.git
+        ${{ secrets.ACTION_NAME }}
+        ${{ secrets.USER_TOKEN }}
         cd LeetCode
         ls
     - name: Install Libraries 
