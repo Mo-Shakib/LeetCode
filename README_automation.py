@@ -6,6 +6,26 @@
 import os, time, pytz, git
 from LeetCode_problem_info import problem_info
 from datetime import datetime
+from git.objects.commit import Commit 
+
+# - - - - - - - - - - - - - - - - - - - - - - - - 
+
+def get_date(epoch_time):
+    return datetime.fromtimestamp(epoch_time)
+
+submissionDate_fileName = {}
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+repo = git.Repo(dir_path)
+tree = repo.tree()
+
+for blob in tree.trees[1]:
+    commit = next(repo.iter_commits(paths=blob.path, max_count=1))
+    date = str(get_date(commit.committed_date))[:10]
+    submissionDate_fileName[blob.name] = date
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 all_files = []
 all_files_id = []
@@ -14,18 +34,15 @@ submissionTime = {}
 skip_files = ['test.py', 'main.py']
 driver = problem_info.Get_Info()
 problem_details = driver.all_data()
-readme_edit = open("README.md", "w")
+readme_edit = open("README.mdx", "w")
 
 for files in os.listdir("Python"):
     if files.endswith(".py"):
         if files not in skip_files:
             all_files.append(files)
-            lastModTime = os.path.getmtime(f'Python/{files}')
-            lastModTime = time.strftime('%Y-%m-%d', time.localtime(lastModTime))
-            submissionTime[files] = lastModTime
             file_id = files.split(".")[0]
             all_files_id.append(file_id)
-            file_data[file_id] = files + "." + lastModTime
+            file_data[file_id] = files + "." + submissionDate_fileName[files]
 
 newfiles = all_files_id
 newfiles_data = {}
@@ -72,7 +89,7 @@ readme_edit.close()
 print("[+] Adding changes to GitHub")
 
 commit_message = "Updated by automated commit"
-repo = git.Repo("/home/runner/work/LeetCode/LeetCode/")
+# repo = git.Repo("/home/runner/work/LeetCode/LeetCode/")
 repo.git.add('--all')
 repo.git.commit('-m', commit_message, author='Shakib')
 origin = repo.remote(name='origin')
