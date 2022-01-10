@@ -1,6 +1,6 @@
 # LeetCode Solutions
 
-[![wakatime](https://wakatime.com/badge/github/Mo-Shakib/LeetCode.svg)](https://wakatime.com/badge/github/Mo-Shakib/LeetCode)![example workflow](https://github.com/Mo-Shakib/LeetCode/actions/workflows/Readme-automation.yml/badge.svg)
+[![wakatime](https://wakatime.com/badge/github/Mo-Shakib/LeetCode.svg)](https://wakatime.com/badge/github/Mo-Shakib/LeetCode) ![example workflow](https://github.com/Mo-Shakib/LeetCode/actions/workflows/Readme-automation.yml/badge.svg)
 
 <a href="https://leetcode.com/Mo-Shakib"><img src="https://leetcode.card.workers.dev/Mo-Shakib?theme=dark&font=baloo&extension=null&border=0.2"></a>
 
@@ -8,8 +8,8 @@
 [LeetCode](https://leetcode.com/) is a website containing many algorithm questions. Most of them are real interview questions of Google, Facebook, LinkedIn, Apple, etc. and it always help to sharp our algorithm skills. This repo shows my solutions in Python. Please feel free to reference and STAR to support this repo, thank you!
 
 
-|   #   |  Title | Solution | Difficulty | Submission |
-| ----- |  ----- | -------- | ---------- | ---------- |
+|   #   |  Title | Solution | Difficulty | Submission Date |
+| ----- |  ----- | -------- | ---------- | --------------- |
 | **1** | [Two sum](https://leetcode.com/problems/two-sum) | [Python](Python/1.two-sum.py) | Easy| 2022-01-05 |
 | **88** | [Merge sorted array](https://leetcode.com/problems/merge-sorted-array) | [Python](Python/88.merge-sorted-array.py) | Easy| 2022-01-05 |
 | **9** | [Palindrome number](https://leetcode.com/problems/palindrome-number) | [Python](Python/9.palindrome-number.py) | Easy| 2022-01-05 |
@@ -34,4 +34,4 @@
 
 
 
-__Last update:__ 11 January, 2022 | 04:28:09
+__Last update:__ 11 January, 2022 | 04:35:55
