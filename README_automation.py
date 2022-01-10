@@ -1,6 +1,7 @@
 # GitHub README.md automation script by Mohammad Shakib
-# This script can automatically update the readme file based on the files in the repo.
-# Last update: 09-01-2022
+# This script can automatically update the readme file based on the files present in the repo.
+# Last update: 10-01-2022
+# Version - v2.0.0
 
 import os, time, pytz
 from LeetCode_problem_info import problem_info
@@ -13,7 +14,7 @@ submissionTime = {}
 skip_files = ['test.py', 'main.py']
 driver = problem_info.Get_Info()
 problem_details = driver.all_data()
-readme_edit = open("READMEx.md", "w")
+readme_edit = open("README.md", "w")
 
 for files in os.listdir("Python"):
     if files.endswith(".py"):
