@@ -14,7 +14,7 @@ def get_date(epoch_time):
 
 submissionDate_fileName = {}
 
-# repo = git.Repo("/home/runner/work/LeetCode/LeetCode/")
+
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 repo = git.Repo(dir_path)
@@ -84,12 +84,11 @@ readme_edit.write(f'__Last update:__ {current_time}')
 
 print('[=] README.md updated.')
 readme_edit.close()
-
+time.sleep(10)
 print("[+] Adding changes to GitHub")
 
 commit_message = "Updated by automated commit"
-
-repo.git.add('README.md')
+repo.git.add('--all')
 repo.git.commit('-m', commit_message, author='Shakib')
 origin = repo.remote(name='origin')
 origin.push()
