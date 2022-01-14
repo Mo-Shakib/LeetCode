@@ -32,8 +32,10 @@
 | **66** | [Plus one](https://leetcode.com/problems/plus-one) | [Python](Python/66.plus-one.py) | Easy| 2022-01-09 |
 | **171** | [Excel sheet column number](https://leetcode.com/problems/excel-sheet-column-number) | [Python](Python/171.excel-sheet-column-number.py) | Easy| 2022-01-10 |
 | **1486** | [Xor operation in an array](https://leetcode.com/problems/xor-operation-in-an-array) | [Python](Python/1486.xor-operation-in-an-array.py) | -| 2022-01-12 |
+| **27** | [Remove element](https://leetcode.com/problems/remove-element) | [Python](Python/27.remove-element.py) | Easy| 2022-01-12 |
 | **507** | [Perfect number](https://leetcode.com/problems/perfect-number) | [Python](Python/507.perfect-number.py) | Easy| 2022-01-12 |
+| **67** | [Add binary](https://leetcode.com/problems/add-binary) | [Python](Python/67.add-binary.py) | Easy| 2022-01-12 |
 
 
 
-__Last update:__ 13 January, 2022 | 00:20:43
+__Last update:__ 13 January, 2022 | 23:52:09
