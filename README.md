@@ -35,7 +35,9 @@
 | **27** | [Remove element](https://leetcode.com/problems/remove-element) | [Python](Python/27.remove-element.py) | Easy| 2022-01-12 |
 | **507** | [Perfect number](https://leetcode.com/problems/perfect-number) | [Python](Python/507.perfect-number.py) | Easy| 2022-01-12 |
 | **67** | [Add binary](https://leetcode.com/problems/add-binary) | [Python](Python/67.add-binary.py) | Easy| 2022-01-12 |
+| **415** | [Add strings](https://leetcode.com/problems/add-strings) | [Python](Python/415.add-strings.py) | Easy| 2022-01-14 |
+| **461** | [Hamming distance](https://leetcode.com/problems/hamming-distance) | [Python](Python/461.hamming-distance.py) | Easy| 2022-01-14 |
 
 
 
-__Last update:__ 13 January, 2022 | 23:52:09
+__Last update:__ 18 January, 2022 | 23:50:38
