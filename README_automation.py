@@ -77,8 +77,8 @@ for key, file_data in newfiles_data.items():
 current_time = datetime.now(pytz.timezone('Asia/Dhaka'))
 current_time = current_time.strftime("%d %B, %Y | %H:%M:%S")
 
-readme_edit.write('\n\n\n')
-readme_edit.write(f'__Last update:__ {current_time}')
+# readme_edit.write('\n\n\n')
+# readme_edit.write(f'__Last update:__ {current_time}')
 
 print('[=] README.md updated.')
 readme_edit.close()
