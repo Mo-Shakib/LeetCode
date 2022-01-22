@@ -38,7 +38,3 @@
 | **461** | [Hamming distance](https://leetcode.com/problems/hamming-distance) | [Python](Python/461.hamming-distance.py) | Easy| 2022-01-14 |
 | **415** | [Add strings](https://leetcode.com/problems/add-strings) | [Python](Python/415.add-strings.py) | Easy| 2022-01-14 |
 | **118** | [Pascals triangle](https://leetcode.com/problems/pascals-triangle) | [Python](Python/118.pascals-triangle.py) | Easy| 2022-01-19 |
-
-
-
-__Last update:__ 21 January, 2022 | 23:42:48
