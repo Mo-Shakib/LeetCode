@@ -38,3 +38,4 @@
 | **461** | [Hamming distance](https://leetcode.com/problems/hamming-distance) | [Python](Python/461.hamming-distance.py) | Easy| 2022-01-14 |
 | **415** | [Add strings](https://leetcode.com/problems/add-strings) | [Python](Python/415.add-strings.py) | Easy| 2022-01-14 |
 | **118** | [Pascals triangle](https://leetcode.com/problems/pascals-triangle) | [Python](Python/118.pascals-triangle.py) | Easy| 2022-01-19 |
+| **283** | [Move zeroes](https://leetcode.com/problems/move-zeroes) | [Python](Python/283.move-zeroes.py) | Easy| 2022-01-28 |
