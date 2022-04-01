@@ -39,3 +39,4 @@
 | **415** | [Add strings](https://leetcode.com/problems/add-strings) | [Python](Python/415.add-strings.py) | Easy| 2022-01-14 |
 | **118** | [Pascals triangle](https://leetcode.com/problems/pascals-triangle) | [Python](Python/118.pascals-triangle.py) | Easy| 2022-01-19 |
 | **283** | [Move zeroes](https://leetcode.com/problems/move-zeroes) | [Python](Python/283.move-zeroes.py) | Easy| 2022-01-28 |
+| **441** | [Arranging coins](https://leetcode.com/problems/arranging-coins) | [Python](Python/441.arranging-coins.py) | Easy| 2022-04-01 |
