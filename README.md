@@ -39,4 +39,7 @@
 | **415** | [Add strings](https://leetcode.com/problems/add-strings) | [Python](Python/415.add-strings.py) | Easy| 2022-01-14 |
 | **118** | [Pascals triangle](https://leetcode.com/problems/pascals-triangle) | [Python](Python/118.pascals-triangle.py) | Easy| 2022-01-19 |
 | **283** | [Move zeroes](https://leetcode.com/problems/move-zeroes) | [Python](Python/283.move-zeroes.py) | Easy| 2022-01-28 |
+| **367** | [Valid perfect square](https://leetcode.com/problems/valid-perfect-square) | [Python](Python/367.valid-perfect-square.py) | Easy| 2022-04-01 |
 | **441** | [Arranging coins](https://leetcode.com/problems/arranging-coins) | [Python](Python/441.arranging-coins.py) | Easy| 2022-04-01 |
+| **69** | [Sqrt x](https://leetcode.com/problems/sqrt-x) | [Python](Python/69.sqrt-x.py) | Easy| 2022-04-01 |
+| **633** | [Sum of square numbers](https://leetcode.com/problems/sum-of-square-numbers) | [Python](Python/633.sum-of-square-numbers.py) | Easy| 2022-04-02 |
