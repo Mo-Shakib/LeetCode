@@ -45,3 +45,4 @@
 | **633** | [Sum of square numbers](https://leetcode.com/problems/sum-of-square-numbers) | [Python](Python/633.sum-of-square-numbers.py) | Easy| 2022-04-02 |
 | **680** | [Valid palindrome ii](https://leetcode.com/problems/valid-palindrome-ii) | [Python](Python/680.valid-palindrome-ii.py) | Easy| 2022-04-02 |
 | **1952** | [Three divisors](https://leetcode.com/problems/three-divisors) | [Python](Python/1952.three-divisors.py) | -| 2022-04-04 |
+| **1461** | [Check if a string contains all binary codes of size k](https://leetcode.com/problems/check-if-a-string-contains-all-binary-codes-of-size-k) | [Python](Python/1461.check-if-a-string-contains-all-binary-codes-of-size-k.py) | -| 2022-05-31 |
