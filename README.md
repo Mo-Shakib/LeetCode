@@ -1,10 +1,8 @@
 # LeetCode Solutions
 
 [![wakatime](https://wakatime.com/badge/github/Mo-Shakib/LeetCode.svg)](https://wakatime.com/badge/github/Mo-Shakib/LeetCode) ![example workflow](https://github.com/Mo-Shakib/LeetCode/actions/workflows/Readme-automation.yml/badge.svg)
-[![Contributors](https://img.shields.io/badge/Total_Lines_of_Code_🐍-1121-yellow?)](https://github.com/Mo-Shakib/LeetCode/graphs/contributors)
 
 <a href="https://leetcode.com/Mo-Shakib"><img src="https://leetcode.card.workers.dev/Mo-Shakib?theme=dark&font=baloo&extension=null&border=0.2"></a>
-
 
 
 [LeetCode](https://leetcode.com/) is a website containing many algorithm questions. Most of them are real interview questions of Google, Facebook, LinkedIn, Apple, etc. and it always help to sharp our algorithm skills. This repo shows my solutions in Python. Please feel free to reference and STAR to support this repo, thank you!
