@@ -27,6 +27,7 @@ jobs:
         pip install Leetcode-problem-info
         pip install pytz
         pip install GitPython
+        pip install markdown
     
     - name: Write README.md
       run: |
