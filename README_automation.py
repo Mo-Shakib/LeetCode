@@ -82,7 +82,17 @@ current_time = current_time.strftime("%d %B, %Y | %H:%M:%S")
 
 print('[=] README.md updated.')
 readme_edit.close()
-time.sleep(10)
+time.sleep(1)
+
+# Writing website for the readme
+print('Writing index.html file')
+markdown.markdownFromFile(
+    input='README.md',
+    output='index.html',
+    encoding='utf8',
+)
+print('Done writing index.html')
+
 print("[+] Adding changes to GitHub")
 
 commit_message = "Updated by automated commit 🤖"
