@@ -96,7 +96,7 @@ print('Done writing index.html')
 print("[+] Adding changes to GitHub")
 
 commit_message = "Updated by automated commit 🤖"
-repo.git.add('README.md')
+repo.git.add('README.md','index.html')
 repo.git.commit('-m', commit_message, author='Shakib')
 origin = repo.remote(name='origin')
 origin.push()
