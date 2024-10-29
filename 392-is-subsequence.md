@@ -1,7 +1,8 @@
 # Is Subsequence
 **URL**: [https://leetcode.com/problems/is-subsequence/description/](https://leetcode.com/problems/is-subsequence/description/)
 
-**Description**
+**Description:**
+
 Given two strings s and t, return true if s is a subsequence of t, or false
 otherwise.
 A subsequence of a string is a new string that is formed from the original
