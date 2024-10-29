@@ -115,7 +115,26 @@ def process_directory(root_directory):
 
 <a href="https://leetcode.com/Mo-Shakib"><img src="https://leetcode.card.workers.dev/Mo-Shakib?theme=dark&font=baloo&extension=null&border=0.2"></a>
 
-[LeetCode](https://leetcode.com/) is a website containing many algorithm questions. Most of them are real interview questions of Google, Facebook, LinkedIn, Apple, etc. and it always help to sharp our algorithm skills. This repo shows my solutions in Python. Please feel free to reference and STAR to support this repo, thank you!
+[LeetCode](https://leetcode.com/) is a website containing many algorithm questions. Most of them are real interview questions of Google, Facebook, LinkedIn, Apple, etc. and it always help to sharp our algorithm skills. This repo shows my solutions in Python. Hit the STAR to support this repo, thank you!
+
+### Repository Structure
+**The repository is organized into three main folders based on difficulty:***
+```
+LeetCode-Solutions/
+├── easy/
+│   ├── [Problem ID]-problem-name.py
+│   ├── ...
+│
+├── medium/
+│   ├── [Problem ID]-problem-name.py
+│   ├── ...
+│
+├── hard/
+│   ├── [Problem ID]-problem-name.py
+│   ├── ...
+|
+└── README.md
+```
 """
 
     readme_lines = [readme_header]
