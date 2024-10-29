@@ -3,11 +3,10 @@
 # Last update: 29-11-2024
 # Version - v3.0.0
 
-import os, time, pytz, git, markdown, re
+import os, time, markdown, re
 from datetime import datetime
-# from git.objects.commit import Commit 
 
-# - - - - - - - - - - - - - - - - - - - - - - - - 
+
 def get_date(epoch_time):
     return datetime.fromtimestamp(epoch_time)
     
@@ -133,15 +132,15 @@ def process_directory(root_directory):
                     # Add entry to the section's list format
                     readme_lines.append(f"[{title}]({url}) - [Solution]({description_filename})")
     
-    # Create or overwrite README.md file in the root directory
+    
     readme_path = os.path.join(root_directory, "README.md")
     with open(readme_path, 'w') as readme_file:
         readme_file.write("\n".join(readme_lines))
     
     print(f"[+] README.md file created at {readme_path}")
 
-# Example usage
-root_directory = os.path.dirname(__file__)  # Set root directory to current script location
+
+root_directory = os.path.dirname(__file__)
 process_directory(root_directory)
 
 # print('[=] Task Successfull')
@@ -152,11 +151,7 @@ process_directory(root_directory)
 # readme_edit.write('\n\n\n')
 # readme_edit.write(f'__Last update:__ {current_time}')
 
-
-
-
 print('[=] README.md updated.')
-# readme_edit.close()
 time.sleep(1)
 
 # Writing website for the readme
