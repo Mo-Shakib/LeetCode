@@ -169,12 +169,12 @@ time.sleep(1)
 # )
 # print('Done writing index.html')
 
-print("[+] Adding changes to GitHub")
+# print("[+] Adding changes to GitHub")
 
-commit_message = "Updated by automated commit 🤖"
-repo.git.add('.')
-repo.git.commit('-m', commit_message, author='Shakib')
-origin = repo.remote(name='origin')
-origin.push()
+# commit_message = "Updated by automated commit 🤖"
+# repo.git.add('.')
+# repo.git.commit('-m', commit_message, author='Shakib')
+# origin = repo.remote(name='origin')
+# origin.push()
 
-print("[=] Successfull")
+# print("[=] Successfull")
