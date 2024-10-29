@@ -2,6 +2,8 @@
 **URL**: [https://leetcode.com/problems/find-closest-number-to-zero/description/](https://leetcode.com/problems/find-closest-number-to-zero/description/)
 
 **Description**
+Given an integer array nums of size n, return the number with the value
+closest to 0 in nums. If there are multiple answers, return the number with
 the largest value.
 
  __Example 1:__

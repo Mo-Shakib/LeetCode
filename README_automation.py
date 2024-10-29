@@ -34,7 +34,7 @@ def create_problem_description_file(file_path, root_directory):
             url = line.strip("# ").strip()
         elif line.strip().startswith("#") and start_description:  # Adds lines to the description
             description_lines.append(line.strip("# ").strip())
-        elif line.strip().startswith("#") and "Given" in line:  # Start description collection at "Given"
+        elif line.strip().startswith("#") and "Testcase Example" in line:  # Start description collection at "Given"
             start_description = True
             description_lines.append(line.strip("# ").strip())
         
@@ -48,7 +48,7 @@ def create_problem_description_file(file_path, root_directory):
 
     
     # Description
-    description_content = f"# {title}\n\n**URL**: [{url}]({url})\n\n**Description**:\n" + "\n".join(description_lines[2:-2]) + "\n\n"
+    description_content = f"# {title}\n\n**URL**: [{url}]({url})\n\n**Description**:\n" + "\n".join(description_lines[1:-2]) + "\n\n"
     code_content = "\n".join(code_lines)
 
     formatted_description_content = format_description(description_content)
@@ -91,14 +91,12 @@ def format_description(content):
             formatted_lines.append("\n**Description**")
         
         else:
-            # Add line normally if it's not empty
             if line:
                 if in_code_block:
                     formatted_lines.append(line)
                 else:
                     formatted_lines.append(line)
 
-    # Close the last code block if we're still in one
     if in_code_block:
         formatted_lines.append("```")
     formatted_lines.append('\n')
@@ -120,20 +118,20 @@ def process_directory(root_directory):
 ### Repository Structure
 **The repository is organized into three main folders based on difficulty:**
 ```
-LeetCode-Solutions/
-├── easy/
-│   ├── [Problem ID]-problem-name.py
-│   ├── ...
-│
-├── medium/
-│   ├── [Problem ID]-problem-name.py
-│   ├── ...
-│
-├── hard/
-│   ├── [Problem ID]-problem-name.py
-│   ├── ...
-|
-└── README.md
+LeetCode/
+    ├── easy/
+    │   ├── [Problem ID]-problem-name.py
+    │   ├── ...
+    │
+    ├── medium/
+    │   ├── [Problem ID]-problem-name.py
+    │   ├── ...
+    │
+    ├── hard/
+    │   ├── [Problem ID]-problem-name.py
+    │   ├── ...
+    |
+    └── README.md
 ```
 """
 
