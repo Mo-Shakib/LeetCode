@@ -88,7 +88,7 @@ def format_description(content):
                 in_code_block = False
             formatted_lines.append(line)  # Add the "**Code**:" line
         elif line.startswith('**Description**'):
-            formatted_lines.append("\n**Description**")
+            formatted_lines.append("\n**Description:**\n")
         
         else:
             if line:
@@ -109,29 +109,19 @@ def process_directory(root_directory):
     # Custom header for the README.md file
     readme_header = """# LeetCode Solutions
 
-[![wakatime](https://wakatime.com/badge/github/Mo-Shakib/LeetCode.svg)](https://wakatime.com/badge/github/Mo-Shakib/LeetCode) ![example workflow](https://github.com/Mo-Shakib/LeetCode/actions/workflows/Readme-automation.yml/badge.svg)
+[![wakatime](https://wakatime.com/badge/github/Mo-Shakib/LeetCode.svg)](https://wakatime.com/badge/github/Mo-Shakib/LeetCode) ![Gihtub workflow](https://github.com/Mo-Shakib/LeetCode/actions/workflows/Readme-automation.yml/badge.svg)
 
 <a href="https://leetcode.com/Mo-Shakib"><img src="https://leetcode.card.workers.dev/Mo-Shakib?theme=dark&font=baloo&extension=null&border=0.2"></a>
 
-[LeetCode](https://leetcode.com/) is a website containing many algorithm questions. Most of them are real interview questions of Google, Facebook, LinkedIn, Apple, etc. and it always help to sharp our algorithm skills. This repo shows my solutions in Python. Hit the STAR to support this repo, thank you!
+Welcome to my repository of LeetCode solutions! This collection includes my answers to various LeetCode problems, organized by difficulty. Each solution is written in Python. Hit the STAR to support this repo, thank you!
 
 ### Repository Structure
-**The repository is organized into three main folders based on difficulty:**
+** The repository is organized into three main folders based on difficulty: **
 ```
 LeetCode/
     ├── easy/
-    │   ├── [Problem ID]-problem-name.py
-    │   ├── ...
-    │
     ├── medium/
-    │   ├── [Problem ID]-problem-name.py
-    │   ├── ...
-    │
-    ├── hard/
-    │   ├── [Problem ID]-problem-name.py
-    │   ├── ...
-    |
-    └── README.md
+    └── hard/
 ```
 """
 
