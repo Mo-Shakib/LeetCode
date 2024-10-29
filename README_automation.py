@@ -118,7 +118,7 @@ def process_directory(root_directory):
 [LeetCode](https://leetcode.com/) is a website containing many algorithm questions. Most of them are real interview questions of Google, Facebook, LinkedIn, Apple, etc. and it always help to sharp our algorithm skills. This repo shows my solutions in Python. Hit the STAR to support this repo, thank you!
 
 ### Repository Structure
-**The repository is organized into three main folders based on difficulty:***
+**The repository is organized into three main folders based on difficulty:**
 ```
 LeetCode-Solutions/
 ├── easy/
@@ -149,7 +149,7 @@ LeetCode-Solutions/
                     file_path = os.path.join(dir_path, filename)
                     problem_id, title, url, description_filename = create_problem_description_file(file_path, root_directory)
                     # Add entry to the section's list format
-                    readme_lines.append(f"[{title}]({url}) - [Solution]({description_filename})")
+                    readme_lines.append(f"- [{title}]({url}) - [Solution]({description_filename})")
     
     
     readme_path = os.path.join(root_directory, "README.md")
