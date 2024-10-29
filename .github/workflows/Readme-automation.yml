@@ -3,7 +3,7 @@ name: Readme automation
 on:
   workflow_dispatch:
   schedule:
-    - cron: "55 17 * * *"
+    - cron: "55 17 */3 * *"
 jobs:
   build:
     runs-on: ubuntu-latest
