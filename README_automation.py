@@ -1,7 +1,7 @@
 # GitHub README.md automation script by Mohammad Shakib
 # This script can automatically update the readme file based on the files present in the repo.
 # Last update: 29-11-2024
-# Version - v3.0.0
+# Version - v3.5.0
 
 import os, time, markdown, re
 from datetime import datetime
@@ -155,20 +155,14 @@ print('[=] README.md updated.')
 time.sleep(1)
 
 # Writing website for the readme
-# print('Writing index.html file')
-# markdown.markdownFromFile(
-#     input='README.md',
-#     output='index.html',
-#     encoding='utf8',
-# )
-# print('Done writing index.html')
+print('Writing index.html file')
+markdown.markdownFromFile(
+    input='README.md',
+    output='index.html',
+    encoding='utf8',
+)
+print('Done writing index.html')
 
-# print("[+] Adding changes to GitHub")
+print("[+] Adding changes to GitHub")
 
-# commit_message = "Updated by automated commit 🤖"
-# repo.git.add('.')
-# repo.git.commit('-m', commit_message, author='Shakib')
-# origin = repo.remote(name='origin')
-# origin.push()
-
-# print("[=] Successfull")
+print("[=] Successfull")
