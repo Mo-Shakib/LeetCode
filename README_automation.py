@@ -116,7 +116,7 @@ def process_directory(root_directory):
 Welcome to my repository of LeetCode solutions! This collection includes my answers to various LeetCode problems, organized by difficulty. Each solution is written in Python. Hit the STAR to support this repo, thank you!
 
 ### Repository Structure
-** The repository is organized into three main folders based on difficulty: **
+**The repository is organized into three main folders based on difficulty:**
 ```
 LeetCode/
     ├── easy/
