@@ -131,3 +131,7 @@ dmypy.json
 .pyre/
 .DS_Store
 easy/temp.py
+temp.py
+temp1.py
+temp2.py
+temp3.py
