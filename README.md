@@ -36,3 +36,10 @@ LeetCode/
 | 1342 | [Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/description/) | [Python](src/1342-number-of-steps-to-reduce-a-number-to-zero.md) |
 | 169 | [Majority Element](https://leetcode.com/problems/majority-element/description/) | [Python](src/169-majority-element.md) |
 | 231 | [Power of Two](https://leetcode.com/problems/power-of-two/description/) | [Python](src/231-power-of-two.md) |
+
+
+## Medium
+
+| ID |              Title                 | Solution |
+|----|------------------------------------|----------|
+| 633 | [Sum of Square Numbers](https://leetcode.com/problems/sum-of-square-numbers/description/) | [Python](src/633-sum-of-square-numbers.md) |
