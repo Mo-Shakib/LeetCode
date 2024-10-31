@@ -1,7 +1,7 @@
 # GitHub README.md automation script by Mohammad Shakib
 # This script can automatically update the readme file based on the files present in the repo.
 # Last update: 29-11-2024
-# Version - v3.5.0
+# Version - v3.6.0
 
 import os, time, markdown, re
 from datetime import datetime
@@ -10,10 +10,10 @@ from datetime import datetime
 def get_date(epoch_time):
     return datetime.fromtimestamp(epoch_time)
     
-def create_problem_description_file(file_path, root_directory):
+def create_problem_description_file(file_path, src_directory):
     filename = os.path.basename(file_path)
     description_filename = os.path.splitext(filename)[0] + ".md"  # Save description as .md
-    description_path = os.path.join(root_directory, description_filename)
+    description_path = os.path.join(src_directory, description_filename)
     
     with open(file_path, 'r') as file:
         lines = file.readlines()
@@ -53,7 +53,7 @@ def create_problem_description_file(file_path, root_directory):
 
     formatted_description_content = format_description(description_content)
 
-    # Save to the root directory as a .md file (overwrite if exists)
+    # Save to the /src directory as a .md file (overwrite if exists)
     with open(description_path, 'w') as desc_file:        
         desc_file.write(formatted_description_content)
         desc_file.write("**Solution Code**:\n")
@@ -106,6 +106,10 @@ def format_description(content):
 def process_directory(root_directory):
     subdirectories = ["easy", "medium", "hard"]
     
+    # Set the /src directory path
+    src_directory = os.path.join(root_directory, "src")
+    os.makedirs(src_directory, exist_ok=True)
+    
     # Custom header for the README.md file
     readme_header = """# LeetCode Solutions
 
@@ -117,6 +121,7 @@ Welcome to my repository of LeetCode solutions! This collection includes my answ
 
 ### Repository Structure
 **The repository is organized into three main folders based on difficulty:**
+
 ```
 LeetCode/
     ├── easy/
@@ -135,9 +140,9 @@ LeetCode/
             for filename in os.listdir(dir_path):
                 if filename.endswith(".py"):
                     file_path = os.path.join(dir_path, filename)
-                    problem_id, title, url, description_filename = create_problem_description_file(file_path, root_directory)
-                    # Add entry to the section's list format
-                    readme_lines.append(f"- [{title}]({url}) - [Solution]({description_filename})")
+                    problem_id, title, url, description_filename = create_problem_description_file(file_path, src_directory)
+                    # Link updated to point to src directory
+                    readme_lines.append(f"- [{title}]({url}) - [Solution](src/{description_filename})")
     
     
     readme_path = os.path.join(root_directory, "README.md")
@@ -149,6 +154,9 @@ LeetCode/
 
 root_directory = os.path.dirname(__file__)
 process_directory(root_directory)
+
+print('[=] README.md updated.')
+time.sleep(1)
 
 # print('[=] Task Successfull')
 
