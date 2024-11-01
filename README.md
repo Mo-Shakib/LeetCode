@@ -42,4 +42,5 @@ LeetCode/
 
 | ID |              Title                 | Solution |
 |----|------------------------------------|----------|
+| 347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/description/) | [Python](src/347-top-k-frequent-elements.md) |
 | 633 | [Sum of Square Numbers](https://leetcode.com/problems/sum-of-square-numbers/description/) | [Python](src/633-sum-of-square-numbers.md) |
