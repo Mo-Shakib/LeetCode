@@ -24,8 +24,10 @@ LeetCode/
 
 | ID |              Title                 | Solution |
 |----|------------------------------------|----------|
+| 202 | [Happy Number](https://leetcode.com/problems/happy-number/description/) | [Python](src/202-happy-number.md) |
 | 1480 | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/description/) | [Python](src/1480-running-sum-of-1-d-array.md) |
 | 344 | [Reverse String](https://leetcode.com/problems/reverse-string/description/) | [Python](src/344-reverse-string.md) |
+| 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/) | [Python](src/20-valid-parentheses.md) |
 | 242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/description/) | [Python](src/242-valid-anagram.md) |
 | 392 | [Is Subsequence](https://leetcode.com/problems/is-subsequence/description/) | [Python](src/392-is-subsequence.md) |
 | 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/description/) | [Python](src/13-roman-to-integer.md) |
@@ -35,6 +37,7 @@ LeetCode/
 | 2239 | [Find Closest Number to Zero](https://leetcode.com/problems/find-closest-number-to-zero/description/) | [Python](src/2239-find-closest-number-to-zero.md) |
 | 1342 | [Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/description/) | [Python](src/1342-number-of-steps-to-reduce-a-number-to-zero.md) |
 | 169 | [Majority Element](https://leetcode.com/problems/majority-element/description/) | [Python](src/169-majority-element.md) |
+| 908 | [Smallest Range I](https://leetcode.com/problems/smallest-range-i/description/) | [Python](src/908-smallest-range-i.md) |
 | 231 | [Power of Two](https://leetcode.com/problems/power-of-two/description/) | [Python](src/231-power-of-two.md) |
 
 
