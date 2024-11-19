@@ -6,11 +6,11 @@
 # https://leetcode.com/problems/valid-parentheses/description/
 #
 # algorithms
-# Easy (41.26%)
-# Likes:    24636
-# Dislikes: 1814
+# Easy (41.34%)
+# Likes:    24730
+# Dislikes: 1817
 # Total Accepted:    5.3M
-# Total Submissions: 12.8M
+# Total Submissions: 12.9M
 # Testcase Example:  '"()"'
 #
 # Given a string s containing just the characters '(', ')', '{', '}', '[' and
@@ -85,7 +85,6 @@ class Solution:
                 if (braket == ')' and popped != '(') or (braket == '}' and popped != '{') or (braket == ']' and popped != '['):
                     return False
         return (len(stack) == 0)
-              
-        
+                      
 # @lc code=end
 
