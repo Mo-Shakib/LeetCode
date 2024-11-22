@@ -34,6 +34,7 @@ LeetCode/
 | 1491 | [Average Salary Excluding the Minimum and Maximum Salary](https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/description/) | [Python](src/1491-average-salary-excluding-the-minimum-and-maximum-salary.md) |
 | 1768 | [Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately/description/) | [Python](src/1768-merge-strings-alternately.md) |
 | 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/description/) | [Python](src/14-longest-common-prefix.md) |
+| 643 | [Maximum Average Subarray I](https://leetcode.com/problems/maximum-average-subarray-i/description/) | [Python](src/643-maximum-average-subarray-i.md) |
 | 2239 | [Find Closest Number to Zero](https://leetcode.com/problems/find-closest-number-to-zero/description/) | [Python](src/2239-find-closest-number-to-zero.md) |
 | 1342 | [Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/description/) | [Python](src/1342-number-of-steps-to-reduce-a-number-to-zero.md) |
 | 169 | [Majority Element](https://leetcode.com/problems/majority-element/description/) | [Python](src/169-majority-element.md) |
