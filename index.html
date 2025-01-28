@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>My LeetCode Solutions</title>
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  body.dark-mode {
+    background-color: #121212;
+    color: #f4f4f4;
+  }
+  header {
+    background-color: #007acc;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+  .container {
+    padding: 2rem;
+    max-width: 950px;
+    margin: 0 auto;
+
+  }
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  .controls input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 70%;
+  }
+  .controls button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .controls button:hover {
+    background-color: #005fa3;
+  }
+  .solution-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    padding: 1rem;
+  }
+  .solution-card.dark-mode {
+    background: #18181A;
+    color: #f4f4f4;
+    border: 1px solid #333;
+  }
+  .solution-card h2 {
+    margin: 0 0 1rem;
+    font-size: 1.5rem;
+  }
+  .solution-card pre {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+    overflow-x: auto;
+  }
+  .solution-card.dark-mode pre {
+    background: #333;
+    color: #f4f4f4;
+  }
+  .solution-card a {
+    text-decoration: none;
+    color: #007acc;
+  }
+  .solution-card a:hover {
+    text-decoration: underline;
+  }
+  footer {
+    text-align: center;
+    padding: 0.5rem;
+    background-color: #007acc;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  footer.dark-mode {
+    background-color: #333;
+  }
+  </style>
+</head>
+<body>
+  <header>
+  <h1>Shakib's LeetCode Solutions</h1>
+  </header>
+  <div class="container">
+  <div class="controls">
+    <input type="text" id="search-input" placeholder="Search for a problem..." />
+    <button id="dark-mode-toggle"><i class="fas fa-moon dark-mode-toggle"></i></button>
+  </div>
+  <div id="solutions-container"></div>
+  </div>
+  <footer>
+  &copy; 2025 Shakib's LeetCode Solutions
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
