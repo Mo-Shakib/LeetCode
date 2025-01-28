@@ -34,7 +34,7 @@ jobs:
     
     - name: 3. Update Readme.md
       run: |
-        python3 README_automation.py
+        python3 generate_readme.py
     
     - name: Commit & Push to GitHub
       run: |
