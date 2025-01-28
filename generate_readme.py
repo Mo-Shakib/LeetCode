@@ -42,7 +42,7 @@ If you'd like to contribute to this project, feel free to open an issue or submi
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the Apache License 2.0 License. See the [LICENSE](LICENSE) file for more details.
 """
 
 # Write the README.md file
