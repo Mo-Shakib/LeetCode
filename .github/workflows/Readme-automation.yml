@@ -24,7 +24,15 @@ jobs:
         python -m pip install --upgrade pip
         pip install markdown2
     
-    - name: Write README.md
+    - name: 1. Generate Data
+      run: |
+        python3 generate_data.py
+    
+    - name: 2. Generate static site
+      run: |
+        python3 generate_site.py
+    
+    - name: 3. Update Readme.md
       run: |
         python3 README_automation.py
     
