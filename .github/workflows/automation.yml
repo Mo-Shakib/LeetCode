@@ -3,7 +3,7 @@ name: Readme automation
 on:
   workflow_dispatch:
   schedule:
-    - cron: "55 17 */3 * *"
+    - cron: "55 17 */30 * *"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,15 +24,15 @@ jobs:
         python -m pip install --upgrade pip
         pip install markdown2
     
-    - name: 1. Generate Data
+    - name: 1. Generate data
       run: |
         python3 generate_data.py
     
-    - name: 2. Generate static site
+    - name: 2. Generate the static site
       run: |
         python3 generate_site.py
     
-    - name: 3. Update Readme.md
+    - name: 3. Update Readme.md file
       run: |
         python3 generate_readme.py
     
