@@ -31,7 +31,7 @@ Below is a list of problems included in this repository:
 
 # Add the list of problems to the README content
 for problem in problems:
-    readme_content += f"| [{problem['title']}]({problem['url']}) | {problem['status']} | {problem['runtime']} | {problem['memory']} | [View Solution](https://mo-shakib.github.io/LeetCode/) |\n"
+    readme_content += f"| [{problem['title']}]({problem['url']}) | {problem['status']} | {problem['runtime']} | {problem['memory']} | [View](https://mo-shakib.github.io/LeetCode/) |\n"
 
 # Add a footer to the README content
 readme_content += """
