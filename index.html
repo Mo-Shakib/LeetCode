@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Prism.js CSS for syntax highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
   <title>My LeetCode Solutions</title>
   <style>
   body {
@@ -18,16 +20,25 @@
     color: #f4f4f4;
   }
   header {
-    background-color: #007acc;
-    color: white;
+    background-color: #ffffff;
+    color: #3b3b3b;
     padding: 1rem 2rem;
     text-align: center;
+    border-bottom: 1px solid orange;
+  }
+  header.dark-mode {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+    border-bottom: 1px solid #ffa51d;
+  }
+  header p {
+    max-width: 850px;
+    margin: auto;
   }
   .container {
     padding: 2rem;
-    max-width: 950px;
+    max-width: 900px;
     margin: 0 auto;
-
   }
   .controls {
     display: flex;
@@ -35,31 +46,33 @@
     margin-bottom: 2rem;
   }
   .controls input {
-    padding: 0.5rem;
+    padding: 0.6rem;
     font-size: 1rem;
     width: 70%;
+    border-radius: 10px;
+    border: none;
   }
   .controls button {
     padding: 0.5rem 1rem;
     font-size: 1rem;
-    background-color: #007acc;
+    background-color: #ffa51d;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
   }
   .controls button:hover {
-    background-color: #005fa3;
+    background-color: black;
   }
   .solution-card {
     background: white;
-    border-radius: 8px;
+    border-radius: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
     padding: 1rem;
   }
   .solution-card.dark-mode {
-    background: #18181A;
+    background: #343434;
     color: #f4f4f4;
     border: 1px solid #333;
   }
@@ -68,27 +81,28 @@
     font-size: 1.5rem;
   }
   .solution-card pre {
-    background: #f8f8f8;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    position: relative;
+    background: #2d2d2d;
+    border-radius: 10px;
     padding: 1rem;
     overflow-x: auto;
+    border: none;
+    color: #f8f8f8;
   }
   .solution-card.dark-mode pre {
-    background: #333;
-    color: #f4f4f4;
+    background: #1e1e1e;
   }
   .solution-card a {
     text-decoration: none;
-    color: #007acc;
+    color: #ffa51d;
   }
   .solution-card a:hover {
     text-decoration: underline;
   }
   footer {
     text-align: center;
-    padding: 0.5rem;
-    background-color: #007acc;
+    padding: 0.2rem;
+    background-color: #3b3b3b;
     color: white;
     position: fixed;
     bottom: 0;
@@ -98,11 +112,50 @@
   footer.dark-mode {
     background-color: #333;
   }
+  #move-to-top {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #ffa51d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  #move-to-top:hover {
+    background-color: black;
+  }
+  #move-to-top.dark-mode {
+    background-color: #ffa51d;
+    color: white;
+  }
+  #move-to-top.dark-mode:hover {
+    background-color: black;
+  }
+  .copy-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffa51d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  .copy-button:hover {
+    background-color: black;
+  }
   </style>
 </head>
 <body>
   <header>
   <h1>Shakib's LeetCode Solutions</h1>
+  <p>Explore my solutions to various LeetCode problems with details on runtime, memory usage, and links to the original problems. Use the search bar to quickly find a specific problem.</p>
   </header>
   <div class="container">
   <div class="controls">
@@ -114,6 +167,13 @@
   <footer>
   &copy; 2025 Shakib's LeetCode Solutions
   </footer>
+  <!-- Add the "Move to Top" button -->
+  <button id="move-to-top" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  <!-- Prism.js for syntax highlighting -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

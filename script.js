@@ -491,30 +491,56 @@ const problems = [
 const container = document.getElementById("solutions-container");
 const searchInput = document.getElementById("search-input");
 const darkModeToggle = document.getElementById("dark-mode-toggle");
+const moveToTopButton = document.getElementById("move-to-top");
 
 // Function to render the problems
 function renderProblems(filter = "") {
   container.innerHTML = ""; // Clear the container
   const filteredProblems = problems.filter(problem =>
-  problem.title.toLowerCase().includes(filter.toLowerCase())
+    problem.title.toLowerCase().includes(filter.toLowerCase())
   );
 
   filteredProblems.forEach(problem => {
-  const card = document.createElement("div");
-  card.className = "solution-card";
+    const card = document.createElement("div");
+    card.className = "solution-card";
 
-  card.innerHTML = `
-    <h2>${problem.title}</h2>
-    <p><strong>Status:</strong> ${problem.status}</p>
-    <p><strong>Runtime:</strong> ${problem.runtime}</p>
-    <p><strong>Memory:</strong> ${problem.memory}</p>
-    <a href="${problem.url}" target="_blank">View Problem</a>
-    <h3>Solution:</h3>
-    <pre>${problem.code}</pre>
-  `;
+    // Add a copy button for the code block
+    const copyButton = document.createElement("button");
+    copyButton.className = "copy-button";
+    copyButton.innerHTML = '<i class="fas fa-copy"></i>';
+    copyButton.addEventListener("click", () => {
+      navigator.clipboard.writeText(problem.code).then(() => {
+        copyButton.innerHTML = '<i class="fas fa-check"></i>';
+        setTimeout(() => {
+          copyButton.innerHTML = '<i class="fas fa-copy"></i>';
+        }, 2000);
+      });
+    });
 
-  container.appendChild(card);
+    card.innerHTML = `
+      <h2>${problem.title}</h2>
+      <p><strong>Status:</strong> ${problem.status}</p>
+      <p><strong>Runtime:</strong> ${problem.runtime}</p>
+      <p><strong>Memory:</strong> ${problem.memory}</p>
+      <a href="${problem.url}" target="_blank">View Problem</a>
+      <h3>Solution:</h3>
+      <pre><code class="language-javascript">${problem.code}</code></pre>
+    `;
+
+    // Append the copy button to the code block
+    const preElement = card.querySelector("pre");
+    preElement.appendChild(copyButton);
+
+    // Apply dark mode class if enabled
+    if (isDarkMode) {
+      card.classList.add("dark-mode");
+    }
+
+    container.appendChild(card);
   });
+
+  // Highlight syntax using Prism.js
+  Prism.highlightAll();
 }
 
 // Event listener for the search input
@@ -528,10 +554,28 @@ let isDarkMode = false;
 darkModeToggle.addEventListener("click", () => {
   isDarkMode = !isDarkMode;
   document.body.classList.toggle("dark-mode", isDarkMode);
+  document.querySelector("header").classList.toggle("dark-mode", isDarkMode);
   document.querySelectorAll(".solution-card").forEach(card => {
-  card.classList.toggle("dark-mode", isDarkMode);
+    card.classList.toggle("dark-mode", isDarkMode);
   });
   document.querySelector("footer").classList.toggle("dark-mode", isDarkMode);
+  moveToTopButton.classList.toggle("dark-mode", isDarkMode);
+});
+
+// "Move to Top" button functionality
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    moveToTopButton.style.display = "block";
+  } else {
+    moveToTopButton.style.display = "none";
+  }
+});
+
+moveToTopButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 });
 
 // Initial render
