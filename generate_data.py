@@ -2,7 +2,6 @@ import os
 import json
 from pathlib import Path
 
-
 def parse_submissions():
     submissions_dir = Path('submissions')
     problems = []
@@ -39,7 +38,7 @@ def parse_submissions():
                 code = f.read()
 
             problem_data = {
-                'title': info['title'],
+                'title': f"{info['question_id']}. {info['title']}",
                 'status': info['status_display'],
                 'runtime': info['runtime'],
                 'memory': info['memory'],
@@ -58,7 +57,6 @@ def parse_submissions():
     # Write to problems.json
     with open('problems.json', 'w') as f:
         json.dump(problems, f, indent=2)
-
 
 if __name__ == '__main__':
     parse_submissions()
